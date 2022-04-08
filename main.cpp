@@ -1,6 +1,4 @@
 
-#include <iostream>
-
 int bitAND(int x, int y) {
 /* returns: ~(~x|~y) based on De Morgan's laws the func calculating the outcome
  * of bitwise AND operand using only ~ | operators, the returned value is equal to x&y*/
@@ -20,7 +18,4 @@ int logicalShift(int x, int n){
     /* returns: ~(~ x | mask), shifting int num n bits right and replacing the left bits with zeros */
     int mask = ((1<<31)>>n)<<1;//the shifting n to the left and then 1 right is replacing n-1 right shifts
     return ~(~x | mask);
-}
-int main(){
-    return logicalShift(0x12345678,4);
 }
