@@ -17,5 +17,5 @@ int getByte(int x, int n){
 int logicalShift(int x, int n){
     /* returns: ~(~ x | mask), shifting int num n bits right and replacing the left bits with zeros */
     int mask = ((1<<31)>>n)<<1;//the shifting n to the left and then 1 right is replacing n-1 right shifts
-    return ~(~x | mask);
+    return x & ~mask);
 }
